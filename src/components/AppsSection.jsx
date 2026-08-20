@@ -12,6 +12,8 @@ import {
   WorkflowIcon,
 } from "@hugeicons/core-free-icons"
 
+const CHIPS = ["bg-chip-blue", "bg-chip-pink", "bg-chip-yellow", "bg-chip-green"]
+
 const APPS = [
   { name: "ChatMate", desc: "AI chat assistant for support & sales", icon: ChatBotIcon },
   { name: "PixelForge", desc: "Generate on-brand images in seconds", icon: AiImageIcon },
@@ -27,10 +29,10 @@ const APPS = [
 
 export default function AppsSection() {
   return (
-    <section id="apps" className="relative bg-paper px-6 py-20 sm:px-8">
+    <section id="apps" className="relative bg-cream px-6 py-20 sm:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-xl text-center">
-          <span className="text-sm font-semibold uppercase tracking-wide text-brand">Apps</span>
+          <span className="text-sm font-semibold uppercase tracking-wide text-slate">Apps</span>
           <h2 className="mt-2 font-heading text-4xl font-bold text-ink sm:text-5xl">
             One account, a whole toolbox
           </h2>
@@ -40,14 +42,14 @@ export default function AppsSection() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
-          {APPS.map((app) => (
+        <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {APPS.map((app, i) => (
             <div
               key={app.name}
-              className="group flex flex-col items-start gap-3 rounded-2xl bg-white p-5 soft-shadow transition hover:-translate-y-1 hover:soft-shadow-lg"
+              className="card-hover flex flex-col items-start gap-3 rounded-xl border border-border bg-white p-5"
             >
-              <span className="grid h-12 w-12 place-items-center rounded-xl gradient-brand">
-                <HugeiconsIcon icon={app.icon} size={22} className="text-white" strokeWidth={2} />
+              <span className={`grid h-11 w-11 place-items-center rounded-lg ${CHIPS[i % CHIPS.length]}`}>
+                <HugeiconsIcon icon={app.icon} size={20} className="text-ink" strokeWidth={1.8} />
               </span>
               <div>
                 <h3 className="font-semibold leading-tight text-ink">{app.name}</h3>

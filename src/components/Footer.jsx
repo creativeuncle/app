@@ -24,13 +24,13 @@ const SOCIALS = [TwitterIcon, InstagramIcon, Github01Icon, Linkedin02Icon]
 
 export default function Footer() {
   return (
-    <footer className="bg-navy px-6 py-14 text-white/90 sm:px-8">
+    <footer className="bg-ink px-6 py-14 text-white/90 sm:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
           <div className="lg:col-span-2">
             <a href="#" className="flex items-center gap-2">
-              <span className="grid h-9 w-9 place-items-center rounded-xl gradient-brand">
-                <HugeiconsIcon icon={SparklesIcon} size={18} className="text-white" />
+              <span className="grid h-9 w-9 place-items-center rounded-lg bg-white">
+                <HugeiconsIcon icon={SparklesIcon} size={18} className="text-ink" />
               </span>
               <span className="font-heading text-2xl font-bold text-white">Kaagaz</span>
             </a>

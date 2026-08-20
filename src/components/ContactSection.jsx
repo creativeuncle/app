@@ -11,10 +11,10 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative bg-paper px-6 py-20 sm:px-8">
+    <section id="contact" className="relative bg-cream px-6 py-20 sm:px-8">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-brand-light px-4 py-1.5 text-sm font-semibold text-brand-dark">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-4 py-1.5 text-sm font-semibold text-ink">
             <HugeiconsIcon icon={CallIcon} size={16} />
             Talk to an expert
           </span>
@@ -27,16 +27,16 @@ export default function ContactSection() {
           </p>
 
           <div className="mt-8 flex items-center gap-3 text-sm text-slate">
-            <HugeiconsIcon icon={Mail01Icon} size={18} className="text-brand" />
+            <HugeiconsIcon icon={Mail01Icon} size={18} className="text-ink" />
             hello@kaagaz.app
           </div>
         </div>
 
-        <div className="rounded-3xl bg-white p-7 soft-shadow-lg sm:p-8">
+        <div className="rounded-2xl border border-border bg-white p-7 sm:p-8">
           {sent ? (
             <div className="flex flex-col items-center justify-center gap-3 py-10 text-center">
-              <span className="grid h-14 w-14 place-items-center rounded-full bg-brand-light">
-                <HugeiconsIcon icon={SentIcon} size={26} className="text-brand" />
+              <span className="grid h-14 w-14 place-items-center rounded-full bg-chip-green">
+                <HugeiconsIcon icon={SentIcon} size={26} className="text-ink" />
               </span>
               <h3 className="text-xl font-bold text-ink">Thanks — message sent!</h3>
               <p className="text-sm text-slate">Our team will reach out to you shortly.</p>
@@ -51,7 +51,7 @@ export default function ContactSection() {
                     required
                     type="text"
                     placeholder="Your name"
-                    className="rounded-xl bg-cream px-4 py-2.5 text-sm text-ink outline-none ring-1 ring-transparent transition focus:ring-brand"
+                    className="rounded-lg border border-border bg-white px-4 py-2.5 text-sm text-ink outline-none transition focus:border-ink"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
@@ -61,7 +61,7 @@ export default function ContactSection() {
                     required
                     type="email"
                     placeholder="you@company.com"
-                    className="rounded-xl bg-cream px-4 py-2.5 text-sm text-ink outline-none ring-1 ring-transparent transition focus:ring-brand"
+                    className="rounded-lg border border-border bg-white px-4 py-2.5 text-sm text-ink outline-none transition focus:border-ink"
                   />
                 </div>
               </div>
@@ -72,7 +72,7 @@ export default function ContactSection() {
                   id="company"
                   type="text"
                   placeholder="Your company"
-                  className="rounded-xl bg-cream px-4 py-2.5 text-sm text-ink outline-none ring-1 ring-transparent transition focus:ring-brand"
+                  className="rounded-lg border border-border bg-white px-4 py-2.5 text-sm text-ink outline-none transition focus:border-ink"
                 />
               </div>
 
@@ -83,13 +83,13 @@ export default function ContactSection() {
                   required
                   rows={4}
                   placeholder="Tell us a little about your project..."
-                  className="resize-none rounded-xl bg-cream px-4 py-2.5 text-sm text-ink outline-none ring-1 ring-transparent transition focus:ring-brand"
+                  className="resize-none rounded-lg border border-border bg-white px-4 py-2.5 text-sm text-ink outline-none transition focus:border-ink"
                 />
               </div>
 
               <button
                 type="submit"
-                className="mt-2 rounded-full gradient-brand px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5"
+                className="mt-2 rounded-full bg-ink px-6 py-3 text-sm font-bold text-white transition hover:bg-ink/85"
               >
                 Send message
               </button>
