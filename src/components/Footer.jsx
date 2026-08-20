@@ -24,17 +24,17 @@ const SOCIALS = [TwitterIcon, InstagramIcon, Github01Icon, Linkedin02Icon]
 
 export default function Footer() {
   return (
-    <footer className="bg-ink px-6 py-14 text-cream sm:px-8">
+    <footer className="bg-navy px-6 py-14 text-white/90 sm:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
           <div className="lg:col-span-2">
             <a href="#" className="flex items-center gap-2">
-              <span className="grid h-9 w-9 place-items-center rounded-xl border-2 border-cream bg-brand">
+              <span className="grid h-9 w-9 place-items-center rounded-xl gradient-brand">
                 <HugeiconsIcon icon={SparklesIcon} size={18} className="text-white" />
               </span>
-              <span className="font-heading text-2xl font-bold">Kaagaz</span>
+              <span className="font-heading text-2xl font-bold text-white">Kaagaz</span>
             </a>
-            <p className="mt-4 max-w-xs text-sm text-cream/60">
+            <p className="mt-4 max-w-xs text-sm text-white/50">
               A single home for the 10+ tiny apps we're building — creative
               tools without the tab-juggling.
             </p>
@@ -43,7 +43,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="grid h-9 w-9 place-items-center rounded-full border-2 border-cream/30 transition hover:border-cream hover:bg-white/10"
+                  className="grid h-9 w-9 place-items-center rounded-full bg-white/5 transition hover:bg-white/10"
                 >
                   <HugeiconsIcon icon={icon} size={16} />
                 </a>
@@ -53,11 +53,11 @@ export default function Footer() {
 
           {COLUMNS.map((col) => (
             <div key={col.title}>
-              <h4 className="text-sm font-semibold text-cream/90">{col.title}</h4>
+              <h4 className="text-sm font-semibold text-white/90">{col.title}</h4>
               <ul className="mt-4 flex flex-col gap-2.5">
                 {col.links.map((l) => (
                   <li key={l}>
-                    <a href="#" className="text-sm text-cream/60 transition hover:text-cream">
+                    <a href="#" className="text-sm text-white/50 transition hover:text-white">
                       {l}
                     </a>
                   </li>
@@ -67,7 +67,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-cream/15 pt-6 text-xs text-cream/50 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row">
           <p>© {new Date().getFullYear()} Kaagaz. All rights reserved.</p>
           <p>Made with care, one app at a time.</p>
         </div>
